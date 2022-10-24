@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 node_modules
 /.vscode
 /.git
+=======
+node_modules
+/.vscode
+/.git
+>>>>>>> 071c5b5daeca20b923436aca1adb5297a1aafeb1

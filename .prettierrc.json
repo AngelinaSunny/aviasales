@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 {
   "trailingComma": "es5",
   "singleQuote": true,
   "endOfLine": "lf",
   "printWidth": 120,
   "semi": true
+=======
+{
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "printWidth": 120,
+  "semi": true
+>>>>>>> 071c5b5daeca20b923436aca1adb5297a1aafeb1
 }
