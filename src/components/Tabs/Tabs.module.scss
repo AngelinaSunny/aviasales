@@ -1,0 +1,30 @@
+@import '/src/helpers/colors';
+.tabs {
+  display: flex;
+  grid-area: tabs;
+  height: 50px;
+
+  .tab {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: $text-color;
+    border: 1px solid $tabs-border;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: #fff;
+  }
+  .tab_active {
+    background-color: $active;
+    color: #fff;
+  }
+  .tab:first-child {
+    border-radius: 5px 0 0 5px;
+  }
+  .tab:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+}

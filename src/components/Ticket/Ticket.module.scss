@@ -1,0 +1,41 @@
+@import '/src/helpers/colors';
+
+.ticket {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  .company-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      color: $active;
+      font-size: 1.5rem;
+    }
+    .company {
+      display: flex;
+    }
+  }
+  .company-price {
+    margin-bottom: 20px;
+  }
+  .ticket-descr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10px;
+    font-weight: 600;
+    flex-grow: 1;
+    div > span {
+      display: block;
+      color: $greytext;
+      font-size: 0.75rem;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    div > p {
+      font-size: 0.875rem;
+    }
+  }
+}

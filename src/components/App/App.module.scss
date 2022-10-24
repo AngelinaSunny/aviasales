@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@400;600&family=Roboto&family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,600&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+@import '/src/helpers/colors';
+
+.App {
+  display: grid;
+  justify-content: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+  color: $text-color;
+  background-color: $background;
+
+  @media (max-width: 699px) {
+    padding: 20px 0;
+  }
+  @media (min-width: 700px) {
+    padding: 50px 0;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+
+    @media (max-width: 699px) {
+      margin-bottom: 20px;
+    }
+    @media (min-width: 700px) {
+      margin-bottom: 30px;
+    }
+  }
+}
