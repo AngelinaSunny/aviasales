@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      {notOk === 2 && !closeAlert && (
+      {notOk > 0 && !closeAlert && (
         <Alert
           severity="info"
           onClose={() => {

@@ -13,7 +13,7 @@ const Main = () => {
 
   return (
     <>
-      {!stop && notOk < 2 ? (
+      {!stop && notOk < 1 ? (
         <>
           <div className={classes['text-loader']}>Продолжаем загружать билеты...</div>
           <BarLoader className={classes.loader} color="rgba(33, 150, 243, 0.47)" width="100%" height="20px" />{' '}
