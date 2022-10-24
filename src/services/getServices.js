@@ -1,23 +1,15 @@
 import * as actions from '../redux/actions/actionsServices';
 
-const { fetchTicketsError, fetchTicketsSuccess, fetchIdSuccess, fetchIsLoading, fetchIsStop, fetchStatusNotOk } =
-  actions;
+const { fetchTicketsSuccess, fetchIdSuccess, fetchIsLoading, fetchIsStop, fetchStatusNotOk } = actions;
 
 export function getId() {
   return function (dispatch) {
     return fetch('https://front-test.dev.aviasales.ru/search')
-      .then(
-        (res) => {
-          if (!res.ok) {
-            throw Error(`При загрузке данных произошла ошибка: ${res.status}`);
-          }
-          return res.json();
-        },
-
-        (err) => {
-          dispatch(fetchTicketsError(err));
+      .then((res) => {
+        if (!res.ok) {
+          throw Error(`При загрузке данных произошла ошибка: ${res.status}`);
         }
-      )
+        return res.json()})
       .then((json) => {
         dispatch(fetchIdSuccess(json));
       })
