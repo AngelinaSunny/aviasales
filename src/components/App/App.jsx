@@ -18,7 +18,7 @@ const App = () => {
       dispatch(getId());
     }
     if (searchId !== null && !stop) {
-      dispatch(getServices(searchId, error));
+      dispatch(getServices(searchId));
     }
   }, [searchId, tickets, stop]);
 
@@ -26,7 +26,7 @@ const App = () => {
     <>
       {error && !closeAlert && (
         <Alert
-          severity="error"
+          severity="warning"
           onClose={() => {
             setCloseAlert(true);
           }}

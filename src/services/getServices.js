@@ -1,6 +1,6 @@
 import * as actions from '../redux/actions/actionsServices';
 
-const { fetchTicketsSuccess, fetchIdSuccess, fetchIsLoading, fetchIsStop, fetchStatusError } = actions;
+const { fetchTicketsSuccess, fetchIdSuccess, fetchIsLoading, fetchIsStop, fetchError } = actions;
 
 export function getId() {
   return function (dispatch) {
@@ -24,7 +24,7 @@ export function getServices(id) {
       .then((res) => {
         dispatch(fetchIsLoading());
         if (!res.ok) {
-          dispatch(fetchStatusError());
+          dispatch(fetchError());
           throw Error(`При загрузке данных произошла ошибка: ${res.status}`);
         }
         return res.json();

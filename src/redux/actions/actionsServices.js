@@ -2,4 +2,4 @@ export const fetchTicketsSuccess = (result) => ({ type: 'FETCH_TICKETS_SUCCESS',
 export const fetchIdSuccess = (result) => ({ type: 'FETCH_ID_SUCCESS', response: result });
 export const fetchIsLoading = () => ({ type: 'FETCH_IS_LOADING' });
 export const fetchIsStop = (result) => ({ type: 'FETCH_IS_STOP', response: result });
-export const fetchStatusError = () => ({ type: 'FETCH_ERROR' });
+export const fetchError = () => ({ type: 'FETCH_ERROR' });

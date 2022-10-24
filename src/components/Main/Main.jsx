@@ -9,11 +9,11 @@ import Tabs from '../Tabs';
 import classes from './Main.module.scss';
 
 const Main = () => {
-  const { stop } = useSelector((state) => state.services);
+  const { error, stop, tickets } = useSelector((state) => state.services);
 
   return (
     <>
-      {!stop ? (
+      {!stop && !error ? (
         <>
           <div className={classes['text-loader']}>Продолжаем загружать билеты...</div>
           <BarLoader className={classes.loader} color="rgba(33, 150, 243, 0.47)" width="100%" height="20px" />{' '}
@@ -22,7 +22,7 @@ const Main = () => {
       <div className={classes.main}>
         <Filter />
         <Tabs />
-        {stop ? (
+        {stop || tickets.length > 0 ? (
           <TicketsList />
         ) : (
           <div className={classes.spinner}>
