@@ -16,7 +16,7 @@ const defaultState = {
     tickets: [],
     stop: false,
     searchId: null,
-    notOk: 0,
+    error: false,
   },
 };
 export default defaultState;

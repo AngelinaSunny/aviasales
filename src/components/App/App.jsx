@@ -11,22 +11,22 @@ import classes from './App.module.scss';
 const App = () => {
   const dispatch = useDispatch();
   const [closeAlert, setCloseAlert] = useState(false);
-  const { searchId, tickets, stop, notOk } = useSelector((state) => state.services);
+  const { searchId, tickets, stop, error } = useSelector((state) => state.services);
 
   useEffect(() => {
     if (!searchId) {
       dispatch(getId());
     }
     if (searchId !== null && !stop) {
-      dispatch(getServices(searchId, notOk));
+      dispatch(getServices(searchId, error));
     }
   }, [searchId, tickets, stop]);
 
   return (
     <>
-      {notOk > 0 && !closeAlert && (
+      {error && !closeAlert && (
         <Alert
-          severity="info"
+          severity="error"
           onClose={() => {
             setCloseAlert(true);
           }}

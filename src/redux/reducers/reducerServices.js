@@ -2,10 +2,10 @@ import defaultState from '../defaultState';
 
 const reducerServices = (state = defaultState.getServices, action) => {
   switch (action.type) {
-    case 'STATUS_NOT_OK':
+    case 'FETCH_ERROR':
       return {
         ...state,
-        notOk: state.notOk + 1,
+        error: true,
       };
     case 'FETCH_IS_LOADING':
       return {
