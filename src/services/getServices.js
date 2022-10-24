@@ -9,7 +9,8 @@ export function getId() {
         if (!res.ok) {
           throw Error(`При загрузке данных произошла ошибка: ${res.status}`);
         }
-        return res.json()})
+        return res.json();
+      })
       .then((json) => {
         dispatch(fetchIdSuccess(json));
       })
