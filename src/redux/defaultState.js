@@ -1,4 +1,4 @@
-const defaultState = {
+export const defaultState = {
   filters: {
     All: false,
     withoutTransfer: true,
@@ -19,4 +19,3 @@ const defaultState = {
     error: false,
   },
 };
-export default defaultState;

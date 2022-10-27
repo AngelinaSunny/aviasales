@@ -39,5 +39,3 @@ export function getServices(id) {
       .catch((e) => console.log(e));
   };
 }
-
-export default getServices;

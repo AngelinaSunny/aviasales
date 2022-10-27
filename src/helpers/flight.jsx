@@ -1,6 +1,6 @@
 import { intlFormat, minutesToHours } from 'date-fns';
 
-const flight = (segment) => {
+export const flight = (segment) => {
   const startTime = intlFormat(new Date(segment.date), {
     hour: 'numeric',
     minute: 'numeric',
@@ -47,4 +47,3 @@ const flight = (segment) => {
     </>
   );
 };
-export default flight;

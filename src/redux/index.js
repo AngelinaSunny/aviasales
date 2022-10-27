@@ -8,6 +8,4 @@ const loggerMiddleware = () => (next) => (action) => {
   const result = next(action);
   return result;
 };
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(loggerMiddleware, thunk)));
-
-export default store;
+export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(loggerMiddleware, thunk)));

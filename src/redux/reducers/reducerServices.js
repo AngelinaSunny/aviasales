@@ -1,6 +1,6 @@
-import defaultState from '../defaultState';
+import { defaultState } from '../defaultState';
 
-const reducerServices = (state = defaultState.getServices, action) => {
+export const reducerServices = (state = defaultState.getServices, action) => {
   switch (action.type) {
     case 'FETCH_ERROR':
       return {
@@ -31,4 +31,3 @@ const reducerServices = (state = defaultState.getServices, action) => {
       return state;
   }
 };
-export default reducerServices;

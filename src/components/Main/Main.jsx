@@ -2,13 +2,13 @@ import { useSelector } from 'react-redux';
 import { SpinnerCircularFixed } from 'spinners-react';
 import { BarLoader } from 'react-spinners';
 
-import TicketsList from '../TicketsList/TicketsList';
-import Filter from '../Filter';
-import Tabs from '../Tabs';
+import { TicketsList } from '../TicketsList/TicketsList';
+import { Filter } from '../Filter/Filter';
+import { Tabs } from '../Tabs/Tabs';
 
 import classes from './Main.module.scss';
 
-const Main = () => {
+export const Main = () => {
   const { error, stop, tickets } = useSelector((state) => state.services);
 
   return (
@@ -33,5 +33,3 @@ const Main = () => {
     </>
   );
 };
-
-export default Main;

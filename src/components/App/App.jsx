@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
 import Alert from '@mui/material/Alert';
 
-import Main from '../Main';
+import { Main } from '../Main/Main';
 import { getServices, getId } from '../../services/getServices';
 
 import Logo from './Logo.png';
 import classes from './App.module.scss';
 
-const App = () => {
+export const App = () => {
   const dispatch = useDispatch();
   const [closeAlert, setCloseAlert] = useState(false);
   const { searchId, tickets, stop, error } = useSelector((state) => state.services);
@@ -41,5 +41,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;

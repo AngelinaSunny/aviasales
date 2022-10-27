@@ -1,6 +1,6 @@
-import defaultState from '../defaultState';
+import { defaultState } from '../defaultState';
 
-const reducerTabs = (state = defaultState.tabs, action) => {
+export const reducerTabs = (state = defaultState.tabs, action) => {
   switch (action.type) {
     case 'TAB_CHEAP':
       return {
@@ -21,5 +21,3 @@ const reducerTabs = (state = defaultState.tabs, action) => {
       return state;
   }
 };
-
-export default reducerTabs;

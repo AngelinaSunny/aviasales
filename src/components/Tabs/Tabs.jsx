@@ -4,7 +4,7 @@ import { tabCheap, tabFast, tabOptima } from '../../redux/actions/actionTabs';
 
 import classes from './Tabs.module.scss';
 
-const Tabs = () => {
+export const Tabs = () => {
   const dispatch = useDispatch();
   const { cheap, fast, optima } = useSelector((state) => state.tabs);
 
@@ -46,5 +46,3 @@ const Tabs = () => {
     </div>
   );
 };
-
-export default Tabs;

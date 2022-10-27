@@ -1,10 +1,10 @@
 import { NumericFormat } from 'react-number-format';
 
-import flight from '../../helpers/flight';
+import { flight } from '../../helpers/flight';
 
 import classes from './Ticket.module.scss';
 
-const Ticket = ({ price, carrier, segments }) => {
+export const Ticket = ({ price, carrier, segments }) => {
   const formatPrice = (
     <NumericFormat
       value={price}
@@ -28,4 +28,3 @@ const Ticket = ({ price, carrier, segments }) => {
     </div>
   );
 };
-export default Ticket;

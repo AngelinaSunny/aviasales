@@ -1,6 +1,6 @@
-import defaultState from '../defaultState';
+import { defaultState } from '../defaultState';
 
-const reducerFilters = (state = defaultState.filters, action) => {
+export const reducerFilters = (state = defaultState.filters, action) => {
   let newState = state;
   if (action.type === 'All') {
     newState = {
@@ -39,5 +39,3 @@ const reducerFilters = (state = defaultState.filters, action) => {
 
   return newState;
 };
-
-export default reducerFilters;
